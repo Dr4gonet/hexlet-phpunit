@@ -19,7 +19,8 @@
       "Php\\Package\\Tests\\": "tests"
       },
       "files": [
-        "src/Utils.php"
+        "src/Utils.php",
+        "src/Stack.php"
     ] 
   },
   "require": {
