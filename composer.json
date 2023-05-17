@@ -20,14 +20,15 @@
       },
       "files": [
         "src/Utils.php",
-        "src/Stack.php"
+        "src/Stack.php"        
     ] 
   },
   "require": {
     "tightenco/collect": "^9.33",
     "nesbot/carbon": "^2.64",
     "symfony/string": "^6.2",
-    "phpstan/phpstan": "^1.9.2"
+    "phpstan/phpstan": "^1.9.2",
+    "lstrojny/functional-php": "^1.17"
   },
   "require-dev": {
     "psy/psysh": "@stable",
