@@ -1,31 +1,30 @@
 <?php
 
-namespace Hexlet\Phpunit\Tests;
-
-//require_once __DIR__ . '/../vendor/autoload.php';
+namespace Hexlet\Phpunit\Tests\FunctionalTest;
 
 use PHPUnit\Framework\TestCase;
-use Hexlet\Phpunit\Functional;
+use Functional;
 
 class FunctionalTest extends TestCase
 {
     // Так определяется переменная на уровне класса
     // Ее называют свойством
     // private – закрывает ее от внешнего доступа
-    private $coll;
+    private array $coll;
 
     // Метод ничего не возвращает
     public function setUp(): void
     {
         // Так к переменной происходит доступ внутри класса
         // В данном случае запись данных
-        $this->coll = ['One', true, 3, 10, 'cat', [], '', 10, false];
+        // $this->coll = ['One', true, 3, 10, 'cat', [], '', 10, false];
+        $this->coll = ['One', true, 3, 10];
     }
 
     public function testFilter(): void
     {
         // Тут идет обращение к свойству
-        Functional\filter($this->coll, fn($element) => is_numeric($element));
+        Functional\filter($this->coll, fn ($element) => is_numeric($element));
     }
 
     public function testZip(): void
@@ -35,7 +34,7 @@ class FunctionalTest extends TestCase
         $coll2 = ['I', 'II', 'III', 'IV'];
         $result = Functional\zip($this->coll, $coll2);
         // тут что ожидаем:
-        $expected = [['One', 'I'], [true, 'II'], [3, 'III'], [10, 'IV']] ;
+        $expected = [['One', 'I'], [true, 'II'], [3, 'III'], [10, 'IV']];
         $this->assertEquals($expected, $result);
     }
 }
