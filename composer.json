@@ -20,7 +20,8 @@
       },
       "files": [
         "src/Utils.php",
-        "src/Stack.php"        
+        "src/Stack.php",
+        "src/Set.php"      
     ] 
   },
   "require": {

@@ -1,5 +1,7 @@
 <?php
 
+//Допустим, мы разрабатываем библиотеку functional-php и хотим протестировать ее функции для обработки коллекций:
+
 namespace Hexlet\Phpunit\Tests\FunctionalTest;
 
 use PHPUnit\Framework\TestCase;
