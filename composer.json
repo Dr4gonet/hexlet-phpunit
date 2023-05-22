@@ -21,7 +21,8 @@
       "files": [
         "src/Utils.php",
         "src/Stack.php",
-        "src/Set.php"      
+        "src/Set.php",
+        "src/fill.php"     
     ] 
   },
   "require": {
